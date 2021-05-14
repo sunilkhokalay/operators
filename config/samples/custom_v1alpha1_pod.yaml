@@ -1,0 +1,7 @@
+apiVersion: custom.example.com/v1alpha1
+kind: Pod
+metadata:
+  name: pod-sample
+spec:
+  image: nginx
+  replicas: 2

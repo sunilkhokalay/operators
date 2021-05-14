@@ -1,0 +1,28 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: operators
+repo: github.com/sunilkhokalay/operators
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: custom
+  kind: Pod
+  path: github.com/sunilkhokalay/operators/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: custom
+  kind: ConfigMap
+  path: github.com/sunilkhokalay/operators/api/v1alpha1
+  version: v1alpha1
+version: "3"

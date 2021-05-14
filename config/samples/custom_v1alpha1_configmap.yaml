@@ -1,0 +1,6 @@
+apiVersion: custom.example.com/v1alpha1
+kind: ConfigMap
+metadata:
+  name: configmap-sample
+spec:
+  customData: This is the custom data
