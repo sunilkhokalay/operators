@@ -19,7 +19,6 @@ package controllers
 import (
 	"context"
 	"fmt"
-
 	"github.com/go-logr/logr"
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -49,9 +48,8 @@ type ConfigMapReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.8.3/pkg/reconcile
 func (r *ConfigMapReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
+	fmt.Printf("Reconcile::ConfigMap::%v\n", req)
 	_ = r.Log.WithValues("configmap", req.NamespacedName)
-
-	fmt.Printf("Reconcile::ConfigMap::%v\n",req)
 
 	return ctrl.Result{}, nil
 }
